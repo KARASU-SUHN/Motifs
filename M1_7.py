@@ -2,7 +2,7 @@ import itertools
 import networkx as nx
 import time
 
-def find_special_subgraphs(graph):
+def Motif(graph):
     subgraph_counts = {}
 
     # Generate all possible combinations of 3 nodes
@@ -57,7 +57,7 @@ with open('s.txt', 'r') as file:
 
 
 start_time = time.time()
-subgraph_counts = find_special_subgraphs(graph)
+subgraph_counts = Motif(graph)
 end_time = time.time()
 
 total_count = sum(subgraph_counts.values())
@@ -73,3 +73,13 @@ with open(output_file, 'w') as file:
     file.write(f"Execution time: {end_time - start_time} seconds\n")
 
 print(f"Output saved to {output_file}")
+
+
+# # Print the found subgraphs and their counts
+# for subgraph, count in subgraph_counts.items():
+#     print(subgraph, "-> Count:", count)
+    
+# print("Total Count:", total_count)
+
+# # Print the execution time
+# print("Execution time:", end_time - start_time, "seconds")
