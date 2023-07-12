@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.sparse import csc_matrix
 
-def directional_breakup(A):
+def DirectionalBreakup(A):
     # Set non-zero elements to 1
     A[A != 0] = 1
     
