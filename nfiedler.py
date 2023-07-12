@@ -1,6 +1,7 @@
 import numpy as np
 from scipy.sparse import eye
 from scipy.sparse.linalg import eigs
+from nlaplacian import nlaplacian
 
 def nfiedler(A, tol=1e-12):
     L = nlaplacian(A)
