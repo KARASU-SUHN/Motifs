@@ -3,7 +3,8 @@ import numpy as np
 def SpectralPartitioning(A):
     part_vec, _ = nfiedler(A)
     order = np.argsort(part_vec)
-
+    
+# % Compute the conductance values (vectorized)
     B = A[order, :][:, order]
     B_lower = np.tril(B)
     B_sums = np.sum(B, axis=1)
@@ -17,7 +18,8 @@ def SpectralPartitioning(A):
     scores = scores[:-1]
 
     condc, min_ind = np.min(scores), np.argmin(scores)
-
+  
+# % The output cluster is the smaller of the two sides of the partition
     n = A.shape[0]
     if min_ind <= np.floor(n / 2):
         cluster = order[:min_ind]
