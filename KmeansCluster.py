@@ -2,6 +2,7 @@ import numpy as np
 from scipy.sparse import diags
 from sklearn.cluster import KMeans
 from scipy.sparse.linalg import eigs
+from nlaplacian import nlaplacian
 
 def KmeansCluster(A, k):
     Ln = nlaplacian(A)
