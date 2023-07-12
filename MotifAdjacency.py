@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.sparse import csr_matrix
+from DirectionalBreakup import DirectionalBreakup
 
 def MotifAdjacency(A, motif):
     # Ignore diagonals and weights
