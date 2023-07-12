@@ -1,17 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
-def MotifAdjacency(A, motif):
-    # Implement the MotifAdjacency function
-    pass
-
-def LargestConnectedComponent(W):
-    # Implement the LargestConnectedComponent function
-    pass
-
-def SpectralPartitioning(A):
-    # Implement the SpectralPartitioning function
-    pass
+from MotifAdjacency import MotifAdjacency
+from LargestConnectedComponent import LargestConnectedComponent
+from SpectralPartitioning import SpectralPartitioning
 
 # Load celegans_data.txt and convert it to appropriate format
 data = np.loadtxt('celegans_data.txt')
